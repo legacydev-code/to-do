@@ -25,3 +25,39 @@ function addTodo() {
         input.value = '';
     }
 }
+// Existing addTodo function...
+
+var notesArray = [];
+var currentNoteIndex = -1;
+
+function createNewNote() {
+    var newNote = { content: "" };
+    notesArray.push(newNote);
+    currentNoteIndex = notesArray.length - 1;
+    updateNotesList();
+    document.getElementById('notes-input').value = newNote.content;
+}
+
+function updateNotesList() {
+    var notesList = document.getElementById('notes-list');
+    notesList.innerHTML = "";
+    notesArray.forEach((note, index) => {
+        var noteElement = document.createElement('div');
+        noteElement.textContent = "Note " + (index + 1);
+        noteElement.className = 'note-item';
+        noteElement.onclick = function() {
+            currentNoteIndex = index;
+            document.getElementById('notes-input').value = notesArray[currentNoteIndex].content;
+        };
+        notesList.appendChild(noteElement);
+    });
+}
+
+function updateCurrentNote() {
+    if (currentNoteIndex !== -1) {
+        var textArea = document.getElementById('notes-input');
+        notesArray[currentNoteIndex].content = textArea.value;
+    }
+}
+
+// Existing openTab function...

@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Todo')">To-Do List</button>
+        <button class="tablinks" onclick="openTab(event, 'Notes')">Notes</button>
+    </div>
+    <div id="Todo" class="tabcontent">
     <div class="todo-container">
         <h1>To-Do List</h1>
         <input type="text" id="todo-input" placeholder="Add a new task...">
@@ -14,6 +19,12 @@
         <ul id="todo-list"></ul>
     </div>
     <script src="script.js"></script>
+    <div id="Notes" class="tabcontent">
+        <h1>My Notes</h1>
+        <button onclick="createNewNote()">Create New Note</button>
+        <div id="notes-list"></div>
+        <textarea id="notes-input" placeholder="Write your note here..."></textarea>
+    </div>
 </body>
 </html>
 

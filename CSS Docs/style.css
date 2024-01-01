@@ -55,3 +55,18 @@ li:hover {
     text-decoration: line-through;
     color: #999;
 }
+/* Existing styles... */
+
+/* Styles for the notes list */
+.note-item {
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.note-item:hover {
+    background-color: #e0e0e0;
+}
