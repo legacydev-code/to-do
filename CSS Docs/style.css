@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+#todo-input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #eee;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li:hover {
+    background: #ddd;
+}
+/* Existing styles... */
+
+/* New styles for the checkbox and completed tasks */
+.checkbox {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
